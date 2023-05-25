@@ -35,6 +35,10 @@ The code performs the following steps:
    - Makes predictions using the trained model.
    - Displays the predictions for the entire dataset.
 
+7. Deployment
+   - Uses AWS sagemaker to train and deploy
+
+
 ## Screenshots
 
 ![Notebook Instance](.\01.NotebookInstance.png)
@@ -72,9 +76,3 @@ Make sure to install the required packages before running the code.
 4. Run the Python code using the command `python code_file.py`, replacing `code_file.py` with the actual name of the code file.
 
 5. The code will execute the functionality described above and display the results in the terminal or command prompt.
-
-Note: The code assumes that the dataset files are named `portfolio.json`, `profile.json`, and `transcript.json`. If your dataset files have different names, make sure to update the file names in the code accordingly.
-
-Feel free to explore the code, modify it, and experiment with different models or techniques to improve the recommendation system.
-
-Enjoy your Starbucks offer recommendation journey!
