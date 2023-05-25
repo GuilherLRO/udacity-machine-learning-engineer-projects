@@ -41,16 +41,16 @@ The code performs the following steps:
 
 ## Screenshots
 
-![Notebook Instance](.\01.NotebookInstance.png)
+![Notebook Instance](01.NotebookInstance.png)
 *Screenshot: AWS Notebook Instance*
 
-![S3 Bucket](.\02.S3Bucket.png)
+![S3 Bucket](02.S3Bucket.png)
 *Screenshot: AWS S3 Bucket*
 
-![Training Job](.\03.TrainingJob.png)
+![Training Job](03.TrainingJob.png)
 *Screenshot: AWS Training Job*
 
-![Deployed Endpoint](.\04.DeployedEndpoint.png)
+![Deployed Endpoint](04.DeployedEndpoint.png)
 *Screenshot: AWS Deployed Endpoint*
 
 ## Requirements
