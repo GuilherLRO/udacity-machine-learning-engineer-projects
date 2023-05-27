@@ -1,8 +1,14 @@
-# Starbucks Offer Recommendation System
+# Starbucks Offer Acceptance Forecast Model With AWS
 
-![Starbucks Logo](projectlogo.png)
+![Starbucks Logo](00.GeneratedLogo.png)
 
-This project aims to build a recommendation system for Starbucks offers using transaction, demographic, and offer data. The goal is to determine which demographic groups respond best to which offer type. The dataset used in this project is a simplified version of the real Starbucks app data.
+In this capstone project, as an AWS machine learning engineer, I developed a Starbucks offer acceptance forecast model using AWS services and machine learning techniques. By leveraging the provided data and applying data preprocessing and feature engineering, I built a model to predict whether a customer is likely to accept a Starbucks offer.
+
+Starting with a baseline model using a decision tree, I achieved a benchmark ROC AUC score of 0.73. The final model surpassed the benchmark achieving a value of 0.87, demonstrating improved accuracy and ROC AUC score. Also the model was deployed in a endpoint and could be accesed outside sagemeker by a lambda function.
+
+Overall, this project showcased the AWS machine learning engineer's proficiency in leveraging various AWS services, such as Amazon SageMaker, S3, IAM and AWS Lambda, to build  a end-to-end solution. The utilization of machine learning techniques, combined with effective data preprocessing and feature engineering, resulted in a model that provided accurate predictions for Starbucks offer acceptance.
+
+For detailed information go to project report.pdf file.
 
 ## Functionality
 
@@ -11,6 +17,7 @@ The code performs the following steps:
 1. Data Gathering and Cleaning:
    - Reads the data files: `portfolio.json`, `profile.json`, and `transcript.json`.
    - Preprocesses the data by handling missing values, renaming columns, converting data types, and performing one-hot encoding.
+
 
 2. Exploratory Data Analysis:
    - Analyzes the distribution of gender, age, and income in the customer profile dataset.
@@ -22,57 +29,21 @@ The code performs the following steps:
    - Filters out incomplete data and unnecessary columns.
 
 4. Model Training and Evaluation:
-   - Splits the dataset into training, validation, and test sets.
-   - Builds an XGBoost classifier model.
-   - Trains the model on the training set.
-   - Evaluates the model's performance using accuracy, precision, recall, F1 score, and ROC AUC.
-   - Displays a confusion matrix and ROC curve.
-
-5. Feature Importance:
-   - Computes and visualizes the importance of features in the XGBoost model.
-
-6. Prediction:
-   - Makes predictions using the trained model.
-   - Displays the predictions for the entire dataset.
-
-7. Deployment
-   - Uses AWS sagemaker to train and deploy
+   - Definition of baseline metric and performance.
+   - Comparison between different models.
+   - Definition of the aproach to be followed in the AWS implementation.
 
 
-## Screenshots
+5. Model deployment
 
-![Notebook Instance](01.NotebookInstance.png)
-*Screenshot: AWS Notebook Instance*
+   - Data setup with S3.
+   - Creation and model Hyperparameter tunning
+   - Endpont Deployment
 
-![S3 Bucket](02.S3Bucket.png)
-*Screenshot: AWS S3 Bucket*
+6. Interfacing with the model.
 
-![Training Job](03.TrainingJob.png)
-*Screenshot: AWS Training Job*
+   - Lambda function creation.
+   - IAM access management
+   - Logic implementation in lambda function. 
 
-![Deployed Endpoint](04.DeployedEndpoint.png)
-*Screenshot: AWS Deployed Endpoint*
-
-## Requirements
-
-The code requires the following Python packages:
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `seaborn`
-- `xgboost`
-- `scikit-learn`
-
-Make sure to install the required packages before running the code.
-
-## Usage
-
-1. Download the code files and the dataset files (`portfolio.json`, `profile.json`, `transcript.json`) from the repository.
-
-2. Place the code files and the dataset files in the same directory.
-
-3. Open a terminal or command prompt and navigate to the directory containing the code files and the dataset files.
-
-4. Run the Python code using the command `python code_file.py`, replacing `code_file.py` with the actual name of the code file.
-
-5. The code will execute the functionality described above and display the results in the terminal or command prompt.
+![Inference](08.LambdaInference.png)
